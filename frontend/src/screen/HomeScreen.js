@@ -28,7 +28,7 @@ function HomeScreen() {
   // }, []);
   return (
     <div>
-      <h1>다양한 뽁뽁이 상품들</h1>
+      <h1>다양한 뽁뽁이 상품들 dd(updated)</h1>
       {loading ? (
         <Loader />
       ) : error ? (

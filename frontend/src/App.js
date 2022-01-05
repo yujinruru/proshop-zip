@@ -2,9 +2,10 @@ import "./App.css";
 import Footer from "./components/Footer";
 import Header from "./components/Header";
 import { Container } from "react-bootstrap";
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { HashRouter as Router, Route } from "react-router-dom";
 import HomeScreen from "./screen/HomeScreen";
 import ProductScreen from "./screen/ProductScreen";
+import ProductListScreen from "./screen/ProductListScreen";
 import CartScreen from "./screen/CartScreen";
 import LoginScreen from "./screen/LoginScreen";
 import RegisterScreen from "./screen/RegisterScreen";
@@ -13,6 +14,9 @@ import ShippingScreen from "./screen/ShippingScreen";
 import PaymentScreen from "./screen/PaymentScreen";
 import PlaceOrderScreen from "./screen/PlaceOrderScreen";
 import OrderScreen from "./screen/OrderScreen";
+import UserListScreen from "./screen/UserListScreen";
+import EditUserScreen from "./screen/UserEditScreen";
+
 function App() {
   return (
     <Router>
@@ -30,6 +34,9 @@ function App() {
             <Route path="/profile" component={ProfileScreen} />
             <Route path="/placeorder" component={PlaceOrderScreen} />
             <Route path="/order/:id" component={OrderScreen} />
+            <Route path="/admin/user/:id/edit" component={EditUserScreen} />
+            <Route path="/admin/userlist" component={UserListScreen} />
+            <Route path="/admin/productlist" component={ProductListScreen} />
           </Container>
         </main>
         <Footer />
